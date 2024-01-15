@@ -6,6 +6,10 @@ let cors = require("cors");
 app.use(express.static("public"));
 app.use(cors());
 
+app.get("/", function(req, res){
+  res.send("Hello World");
+})
+
 app.get("/weatherData", function (request, response) {
   console.log("Server called");
   const apiUrl =
